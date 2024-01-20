@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>E-LEARN</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/allCourses.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <script src="https://kit.fontawesome.com/9d595d1bf3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <%- include('Navbar.ejs')%>
+    <section class="course-section">
+      <h1>Courses</h1>
+      <ul class="course-list">
+        <% courses.forEach(course=> { %>
+          <li class="course-item">
+            <img src="<%= course.courseImage %>" alt="Course Image" class="course-image">
+            <h2 class="course-title">
+              <%= course.courseTitle %>
+            </h2>
+            <p class="course-content">
+              <%= course.content %>
+            </p>
+            <a href="/addTopic?courseTitle=<%= encodeURIComponent(course.courseTitle) %>"><button class="add-topic">Add
+                Links</button></a>
+          </li>
+          <% }); %>
+      </ul>
+    </section>
+    <%- include('Footer.ejs') %>
+</body>
+
+</html>

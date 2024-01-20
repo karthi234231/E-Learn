@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDENT LOGIN</title>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/css/StudentLogin.css">
+
+</head>
+
+<body>
+    <%- include('mini-nav.ejs') %>
+        <div class="container">
+            <div class="form login">
+                <div class="form-content">
+                    <header>Login</header>
+                    <form method="POST" action="/loginsubmit">
+                        <div class="field input-field">
+                            <input type="email" placeholder="Email" name="email" class="input">
+                        </div>
+
+                        <div class="field input-field">
+                            <input type="password" placeholder="Password" name="password" class="password">
+                            <i class='bx bx-hide eye-icon'></i>
+                        </div>
+
+                        <div class="form-link">
+                            <a href="#" class="forgot-pass">Forgot password?</a>
+                        </div>
+
+                        <div class="field button-field">
+                            <button>Login</button>
+                        </div>
+                    </form>
+
+                    <div class="form-link">
+                        Don't have an account? <span><a href="studentSignUp" class="link signup-link">Signup</a></span>
+
+                    </div>
+                    <p class="form-link or">or</p>
+                    <div class="form-link admins">Admin Account?<a href="adminLogin">Login</a></div>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="media-options">
+                    <a href="#" class="field google">
+                        <img src="../images/search.png" alt="" class="google-img">
+                        <span>Login with Google</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <!-- JavaScript -->
+
+        <script src="js/login.js"></script>
+</body>
+
+</html>
+</body>
+
+</html>

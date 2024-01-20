@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ADD A COURSE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/9d595d1bf3.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/css/addTopic.css">
+</head>
+
+<body>
+  <%- include('Navbar.ejs')%>
+
+    </section>
+    <section class="sectionCourse" aria-label="recent post">
+      <div class="container">
+
+        <div class="title-wrapper">
+          <h2 class="h2 section-title">
+            Publish <strong class="strong" style="display: inline;">Links for : <%= courseTitle %></strong>
+          </h2>
+        </div>
+        <ul class="grid-list">
+          <form action="/uploadTopic" method="POST">
+            <input type="hidden" name="courseTitle" value="<%= courseTitle %>">
+            <input type="text" value="" name="topicTitle" placeholder="Topic Title">
+            <input type="text" name="link1" value="" placeholder="Geek For Geeks Link">
+            <input type="text" name="link2" value="" placeholder="Java Point Link">
+            <input type="text" name="link3" value="" placeholder="W3 Schools link">
+            <div class="card-content">
+              <input type="submit" value="ADD TOPIC">
+            </div>
+          </form>
+        </ul>
+      </div>
+    </section>
+
+
+</body>
+
+
+</html>

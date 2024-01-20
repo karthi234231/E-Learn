@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-STUDY</title>
+
+  <link rel="stylesheet" href="/css/addCourse.css">
+</head>
+
+<body>
+  <%- include('Navbar.ejs')%>
+
+    <section class="sectionCourse" aria-label="recent post">
+      <div class="container">
+        <div class="title-wrapper">
+          <h2 class="h2 section-title">
+            Feature Subjects
+          </h2>
+        </div>
+        <ul class="grid-list">
+          <form action="/uploadcourse" method="POST">
+            <input type="text" value="" name="courseImage" placeholder="Course Image URL">
+            <input type="text" name="courseTitle" value="" placeholder="Course Title">
+            <textarea name="content" placeholder="Course Description" minlength="10"></textarea>
+            <div class="card-content">
+              <input type="submit" value="ADD SUBJECT">
+            </div>
+          </form>
+        </ul>
+      </div>
+    </section>
+
+</body>
+
+
+</html>
